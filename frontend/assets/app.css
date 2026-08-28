@@ -1,0 +1,48 @@
+:root {
+  --sidebar: #111827;
+  --background: #f3f6fb;
+  --border: #e5e7eb;
+  --full: #16a34a;
+  --low: #f59e0b;
+  --out: #dc2626;
+}
+
+body { margin: 0; background: var(--background); color: #1f2937; }
+
+.sidebar {
+  position: fixed; top: 0; bottom: 0; left: 0;
+  display: flex; flex-direction: column;
+  width: 250px; padding: 24px 16px;
+  background: var(--sidebar); color: #fff;
+}
+.sidebar nav { flex: 1; }
+.sidebar-footer { padding-top: 16px; border-top: 1px solid #1f2937; }
+.sidebar-user { margin-bottom: 8px; padding: 0 13px; color: #9ca3af; font-size: 0.85rem; }
+.brand { padding: 0 10px 24px; font-size: 1.15rem; font-weight: 700; }
+.sidebar .nav-link { margin-bottom: 6px; padding: 11px 13px; border-radius: 10px; color: #9ca3af; }
+.sidebar .nav-link:hover, .sidebar .nav-link.active { background: #1f2937; color: #fff; }
+
+.main-content { margin-left: 250px; padding: 28px; }
+.panel { border: 1px solid var(--border); border-radius: 16px; background: #fff; box-shadow: 0 4px 20px rgba(31,41,55,.04); }
+.summary-card { height: 100%; padding: 20px; }
+.summary-icon { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 13px; font-size: 1.15rem; }
+.summary-number { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+.product-card { height: 100%; padding: 18px; border-left: 5px solid #94a3b8; }
+.product-card.full { border-left-color: var(--full); }
+.product-card.low { border-left-color: var(--low); }
+.product-card.out { border-left-color: var(--out); }
+.product-image { display: grid; width: 58px; height: 58px; flex-shrink: 0; place-items: center; border-radius: 12px; background: #eef2f7; color: #64748b; font-size: 1.5rem; }
+.stock-count { font-size: 1.65rem; font-weight: 700; }
+.live-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 5px #dcfce7; }
+.table > :not(caption) > * > * { padding: 13px 12px; vertical-align: middle; }
+.nav-tabs .nav-link { color: #6b7280; }
+.nav-tabs .nav-link.active { font-weight: 600; color: #1f2937; }
+.modal-content { border: 0; border-radius: 16px; }
+
+@media (max-width: 991px) {
+  .sidebar { position: static; width: 100%; padding: 14px; }
+  .brand { padding-bottom: 10px; }
+  .sidebar nav { display: flex; gap: 5px; overflow-x: auto; }
+  .sidebar .nav-link { margin: 0; white-space: nowrap; }
+  .main-content { margin-left: 0; padding: 18px; }
+}

@@ -1,0 +1,14 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 25
+names: ['beans', 'cake', 'candy', 'cereal', 'chips', 'chocolate', 'coffee', 'corn', 'fish', 'flour', 'honey', 'jam', 'juice', 'milk',
+ 'nuts', 'oil', 'pasta', 'rice', 'soda', 'spices', 'sugar', 'tea', 'tomato_sauce', 'vinegar', 'water']
+
+roboflow:
+  workspace: moroccan-data
+  project: freiburg-grocery
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/moroccan-data/freiburg-grocery/dataset/1
